@@ -1,6 +1,2 @@
-require "elephant_journal_cli/version"
-
-module ElephantJournalCli
-  class Error < StandardError; end
-  # Your code goes here...
-end
+require_relative "./elephant_journal_cli/version"
+require_relative "./elephant_journal_cli/cli"

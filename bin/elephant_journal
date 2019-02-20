@@ -1,1 +1,5 @@
 #!/usr/bin/env ruby
+
+require "./lib/elephant_journal_cli"
+
+ElephantJournalCli::CLI.new.call
