@@ -20,12 +20,12 @@ class ElephantJournalCli::CLI
       number = gets.chomp
       case number
       when "1"
-      puts "Article 1 text"
+        puts "Article 1 text"
       when "2"
-      puts "Article 2 text"
+        puts "Article 2 text"
       when "3"
-      puts "Article 3 text"
+        puts "Article 3 text"
+      end
     end
-  end
 
 end
