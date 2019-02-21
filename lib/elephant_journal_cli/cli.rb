@@ -6,6 +6,7 @@ class ElephantJournalCli::CLI
     puts "Top 3 posts on Elephant Journal Today:"
     list_posts
     reader
+    goodbye
   end
 
   def list_posts
@@ -15,8 +16,9 @@ class ElephantJournalCli::CLI
   end
 
   def reader
-    puts "What article do you want to read? If not, type exit."
+    number = nil
     while number != "exit"
+      puts "What article do you want to read? If not, type exit."
       number = gets.chomp
       case number
       when "1"
@@ -25,7 +27,14 @@ class ElephantJournalCli::CLI
         puts "Article 2 text"
       when "3"
         puts "Article 3 text"
+      when list
+        list_posts
       end
     end
+  end
+
+  def goodbye
+    puts "Come back tomorrow from more cool reads!"
+  end
 
 end
