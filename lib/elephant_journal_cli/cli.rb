@@ -10,15 +10,14 @@ class ElephantJournalCli::CLI
   end
 
   def list_posts
-    puts "1. 3 Powerful Practices for Healing the Broken Child inside Us."
-    puts "2. So I met this girl."
-    puts "3. BlaBlaBla."
+
+    @posts = ElephantJournalCli::Post.today
   end
 
   def reader
     number = nil
     while number != "exit"
-      puts "What article do you want to read? If not, type exit."
+      puts "What article do you want to read? Type the number, to list again, type list and to exit, type exit."
       number = gets.chomp
       case number
       when "1"
@@ -27,8 +26,10 @@ class ElephantJournalCli::CLI
         puts "Article 2 text"
       when "3"
         puts "Article 3 text"
-      when list
+      when "list"
         list_posts
+      else
+        puts "I don't recognize what you typed. To list again, type list and to exit, type exit."
       end
     end
   end
