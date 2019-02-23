@@ -17,11 +17,12 @@ class ElephantJournalCli::Post
     post_2.author = "Name 2"
     post_2.url = "blank"
 
+
     post_3 = self.new
     post_3.title = "BlaBlaBla."
     post_3.author = "Name 3"
     post_3.url = "blank"
 
-
+    [post_1, post_2, post_3]
   end
 end
