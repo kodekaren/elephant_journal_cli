@@ -16,7 +16,6 @@ class ElephantJournalCli::CLI
 
   def reader
     number = nil
-    while number != "exit"
       puts "What article do you want to read? Type the number, to list again, type list and to exit, type exit."
       number = gets.chomp
       if number.to_i > 0
