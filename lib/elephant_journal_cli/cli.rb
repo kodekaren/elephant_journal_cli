@@ -19,14 +19,9 @@ class ElephantJournalCli::CLI
     while number != "exit"
       puts "What article do you want to read? Type the number, to list again, type list and to exit, type exit."
       number = gets.chomp
-      case number
-      when "1"
-        puts "Article 1 text"
-      when "2"
-        puts "Article 2 text"
-      when "3"
-        puts "Article 3 text"
-      when "list"
+      if number.to_i > 0
+      puts @posts[number.to_i-1]
+    elsif number == "list"
         list_posts
       else
         puts "I don't recognize what you typed. To list again, type list and to exit, type exit."
