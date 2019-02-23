@@ -20,7 +20,7 @@ class ElephantJournalCli::CLI
       number = gets.chomp
       if number.to_i > 0
       puts @posts[number.to_i-1]
-    elsif number == "list"
+      elsif number == "list"
         list_posts
       else
         puts "I don't recognize what you typed. To list again, type list and to exit, type exit."
