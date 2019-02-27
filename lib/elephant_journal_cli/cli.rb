@@ -21,7 +21,8 @@ end
       puts "What article do you want to read? Type the number, to list again, type list and to exit, type exit."
       number = gets.chomp
       if number.to_i > 0
-      puts @posts[number.to_i-1]
+        the_post = @posts[number.to_i-1]
+      puts "#{the_post.title} - Written by #{the_post.author}"
       elsif number == "list"
         list_posts
       else
