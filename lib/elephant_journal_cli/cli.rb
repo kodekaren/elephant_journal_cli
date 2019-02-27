@@ -12,7 +12,7 @@ class ElephantJournalCli::CLI
     puts "Top 3 posts on Elephant Journal Today:"
     @posts = ElephantJournalCli::Post.today
     @posts.each.with_index(1) do |post, i|
-      puts "#{i} - #{post.name} - Written by #{post.author}
+      puts "#{i} - #{post.name} - Written by #{post.author}"
   end
 
   def reader
