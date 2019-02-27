@@ -2,11 +2,11 @@ class ElephantJournalCli::Post
   attr_accessor :url, :title, :author
 
   def self.today
-    #should return instances of post from today
-    # puts "1. 3 Powerful Practices for Healing the Broken Child inside Us."
-    # puts "2. So I met this girl."
-    # puts "3. BlaBlaBla."
+    #scrape elephant journal and return posts
+    self.scrape_posts
+  end
 
+  def self.scrape_posts
     post_1 = self.new
     post_1.title = "3 Powerful Practices for Healing the Broken Child inside Us."
     post_1.author = "Name 1"
